@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>حجوزات المزارع</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* صورة الخلفية فوق الصفحة مع ارتفاع متجاوب */
+    .header-image {
+      width: 100%;
+      height: 30vw; /* ارتفاع متناسب مع عرض الشاشة */
+      min-height: 150px; /* حد أدنى للارتفاع */
+      background-image: url('https://i.postimg.cc/SxRYC46P/Group-6835.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans">
+
+  <!-- صورة الخلفية بدلاً من الاب بار -->
+  <div class="header-image"></div>
+
+  <!-- فلتر اختيار المدينة -->
+  <section class="px-4 py-4 flex justify-center">
+    <select id="cityFilter" onchange="filterFarms()" class="p-2 rounded border w-64">
+      <option value="الكل">كل المدن</option>
+      <option value="عمان">عمان</option>
+      <option value="جرش">جرش</option>
+      <option value="إربد">إربد</option>
+      <option value="الزرقاء">الزرقاء</option>
+    </select>
+  </section>
+
+  <!-- قائمة المزارع -->
+  <main class="bg-gray-100 px-4 py-8">
+    <h2 class="text-2xl font-semibold mb-6 text-right">المزارع المتوفره</h2>
+
+    <div id="farmsList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- مزرعة 1 - عمان -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="عمان">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9l-rvdgWwAMLJ2rM3WptBMuslhugKAfteGQ&s" class="w-full h-56 object-cover" alt="مزرعة في عمان">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-1">مزرعة ريفية في عمان</h3>
+          <p class="text-gray-600">عمان</p>
+          <p class="text-green-700 font-semibold mt-2">400 دينار / أيام الأسبوع</p>
+          <p class="text-red-600">600 دينار / العطل</p>
+          <a href="https://wa.me/962795808739?text=مرحبًا، أرغب بحجز مزرعة ريفية في عمان." target="_blank" class="mt-4 block text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            احجز الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- مزرعة 2 - جرش -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="جرش">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHuwj9QUEP_lY42WLBm7VygmsXQP9BMeydd3Pr7rAMqfaGQ5Lm9kg6sfmQYrFm6gmU4qE&usqp=CAU" class="w-full h-56 object-cover" alt="مزرعة في جرش">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-1">مزرعة بمسبح في جرش</h3>
+          <p class="text-gray-600">جرش</p>
+          <p class="text-green-700 font-semibold mt-2">500 دينار / أيام الأسبوع</p>
+          <p class="text-red-600">700 دينار / العطل</p>
+          <a href="https://wa.me/962795808739?text=مرحبًا، أرغب بحجز مزرعة بمسبح في جرش." target="_blank" class="mt-4 block text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            احجز الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- مزرعة 3 - الزرقاء -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="الزرقاء">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600" class="w-full h-56 object-cover" alt="مزرعة في الزرقاء">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-1">مزرعة طبيعية بالزرقاء</h3>
+          <p class="text-gray-600">الزرقاء</p>
+          <p class="text-green-700 font-semibold mt-2">350 دينار / أيام الأسبوع</p>
+          <p class="text-red-600">550 دينار / العطل</p>
+          <a href="https://wa.me/962795808739?text=مرحبًا، أرغب بحجز مزرعة طبيعية في الزرقاء." target="_blank" class="mt-4 block text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            احجز الآن
+          </a>
+        </div>
+      </div>
+
+      <!-- مزرعة 4 - إربد -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="إربد">
+        <img src="https://samadeadsea.com/wp-content/uploads/2022/06/M0A0049-HDR.jpg" class="w-full h-56 object-cover" alt="مزرعة في إربد">
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-1">مزرعة جبلية في إربد</h3>
+          <p class="text-gray-600">إربد</p>
+          <p class="text-green-700 font-semibold mt-2">420 دينار / أيام الأسبوع</p>
+          <p class="text-red-600">620 دينار / العطل</p>
+          <a href="https://wa.me/962795808739?text=مرحبًا، أرغب بحجز مزرعة جبلية في إربد." target="_blank" class="mt-4 block text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            احجز الآن
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  
+
+  <!-- JavaScript لتصفية المدن -->
+  <script>
+    function filterFarms() {
+      const selectedCity = document.getElementById("cityFilter").value;
+      const farms = document.querySelectorAll(".farm");
+      farms.forEach(farm => {
+        const city = farm.getAttribute("data-city");
+        if (selectedCity === "الكل" || city === selectedCity) {
+          farm.style.display = "block";
+        } else {
+          farm.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
