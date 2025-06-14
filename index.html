@@ -35,70 +35,77 @@
 
   <!-- قائمة المزارع -->
   <main class="bg-gray-100 px-4 py-8">
-    <h2 class="text-2xl font-semibold mb-6 text-right">المزارع المتوفره</h2>
+    <h2 class="text-2xl font-semibold mb-6 text-right">المزارع المتوفرة</h2>
 
     <div id="farmsList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- مزرعة 1 - عمان -->
-      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="عمان">
+      <!-- مزرعة 1 -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="عمان" data-booking="من 9 صباحاً إلى 10 ليلا">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9l-rvdgWwAMLJ2rM3WptBMuslhugKAfteGQ&s" class="w-full h-56 object-cover" alt="مزرعة في عمان">
         <div class="p-4">
-          <h3 class="text-xl font-bold mb-1">مزرعة ريفية في عمان</h3>
-          <p class="text-gray-600">عمان</p>
-          <p class="text-green-700 font-semibold mt-2">400 دينار / أيام الأسبوع</p>
-          <p class="text-red-600">600 دينار / العطل</p>
-          <button class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
-            احجز الآن
-          </button>
+          <h3 class="text-xl font-bold mb-1 text-black">مزرعة ريفية في عمان</h3>
+          <p><span class="font-bold text-green-800">المدينة:</span> <span class="text-black font-bold">عمان</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام الأسبوع:</span> <span class="text-black font-bold">400</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام العطل:</span> <span class="text-black font-bold">600</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">وقت الحجز:</span> <span class="text-black font-bold">من 9 صباحاً إلى 10 ليلا</span></p>
+          <p><span class="font-bold text-green-800">أجار حجز ليلة واحدة:</span> <span class="text-black font-bold">50</span> <span class="text-black font-bold">دينار</span></p>
+          <a href="farm-details.html?title=مزرعة ريفية في عمان&city=عمان&priceWeek=400&priceWeekend=600&priceNight=50&img=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9l-rvdgWwAMLJ2rM3WptBMuslhugKAfteGQ&s&booking=من%209%20صباحاً%20إلى%2010%20صباحاً" class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            عرض المزرعة
+          </a>
         </div>
       </div>
 
-      <!-- مزرعة 2 - جرش -->
-      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="جرش">
+      <!-- مزرعة 2 -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="جرش" data-booking="من 11 صباحاً إلى 12 ليلا">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHuwj9QUEP_lY42WLBm7VygmsXQP9BMeydd3Pr7rAMqfaGQ5Lm9kg6sfmQYrFm6gmU4qE&usqp=CAU" class="w-full h-56 object-cover" alt="مزرعة في جرش">
         <div class="p-4">
-          <h3 class="text-xl font-bold mb-1">مزرعة بمسبح في جرش</h3>
-          <p class="text-gray-600">جرش</p>
-          <p class="text-green-700 font-semibold mt-2">500 دينار / أيام الأسبوع</p>
-          <p class="text-red-600">700 دينار / العطل</p>
-          <button class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
-            احجز الآن
-          </button>
+          <h3 class="text-xl font-bold mb-1 text-black">مزرعة بمسبح في جرش</h3>
+          <p><span class="font-bold text-green-800">المدينة:</span> <span class="text-black font-bold">جرش</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام الأسبوع:</span> <span class="text-black font-bold">500</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام العطل:</span> <span class="text-black font-bold">700</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">وقت الحجز:</span> <span class="text-black font-bold">من 11 صباحاً إلى 12 ليلا</span></p>
+          <p><span class="font-bold text-green-800">أجار حجز ليلة واحدة:</span> <span class="text-black font-bold">60</span> <span class="text-black font-bold">دينار</span></p>
+          <a href="farm-details.html?title=مزرعة بمسبح في جرش&city=جرش&priceWeek=500&priceWeekend=700&priceNight=60&img=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHuwj9QUEP_lY42WLBm7VygmsXQP9BMeydd3Pr7rAMqfaGQ5Lm9kg6sfmQYrFm6gmU4qE&booking=من%2011%20صباحاً%20إلى%2012%20ظهراً" class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            عرض المزرعة
+          </a>
         </div>
       </div>
 
-      <!-- مزرعة 3 - الزرقاء -->
-      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="الزرقاء">
+      <!-- مزرعة 3 -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="الزرقاء" data-booking="من 8 صباحاً إلى 9 ليلا">
         <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600" class="w-full h-56 object-cover" alt="مزرعة في الزرقاء">
         <div class="p-4">
-          <h3 class="text-xl font-bold mb-1">مزرعة طبيعية بالزرقاء</h3>
-          <p class="text-gray-600">الزرقاء</p>
-          <p class="text-green-700 font-semibold mt-2">350 دينار / أيام الأسبوع</p>
-          <p class="text-red-600">550 دينار / العطل</p>
-          <button class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
-            احجز الآن
-          </button>
+          <h3 class="text-xl font-bold mb-1 text-black">مزرعة طبيعية بالزرقاء</h3>
+          <p><span class="font-bold text-green-800">المدينة:</span> <span class="text-black font-bold">الزرقاء</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام الأسبوع:</span> <span class="text-black font-bold">350</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام العطل:</span> <span class="text-black font-bold">550</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">وقت الحجز:</span> <span class="text-black font-bold">من 8 صباحاً إلى 9 ليلا</span></p>
+          <p><span class="font-bold text-green-800">أجار حجز ليلة واحدة:</span> <span class="text-black font-bold">70</span> <span class="text-black font-bold">دينار</span></p>
+          <a href="farm-details.html?title=مزرعة طبيعية بالزرقاء&city=الزرقاء&priceWeek=350&priceWeekend=550&priceNight=70&img=https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600&booking=من%208%20صباحاً%20إلى%209%20صباحاً" class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            عرض المزرعة
+          </a>
         </div>
       </div>
 
-      <!-- مزرعة 4 - إربد -->
-      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="إربد">
-        <img src="https://samadeadsea.com/wp-content/uploads/2022/06/M0A0049-HDR.jpg" class="w-full h-56 object-cover" alt="مزرعة في إربد">
+      <!-- مزرعة 4 -->
+      <div class="farm bg-white rounded-lg shadow-md overflow-hidden" data-city="إربد" data-booking="من 10 صباحاً إلى 11 ليلا">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600" class="w-full h-56 object-cover" alt="مزرعة في إربد">
         <div class="p-4">
-          <h3 class="text-xl font-bold mb-1">مزرعة جبلية في إربد</h3>
-          <p class="text-gray-600">إربد</p>
-          <p class="text-green-700 font-semibold mt-2">420 دينار / أيام الأسبوع</p>
-          <p class="text-red-600">620 دينار / العطل</p>
-          <button class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
-            احجز الآن
-          </button>
+          <h3 class="text-xl font-bold mb-1 text-black">مزرعة جميلة في إربد</h3>
+          <p><span class="font-bold text-green-800">المدينة:</span> <span class="text-black font-bold">إربد</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام الأسبوع:</span> <span class="text-black font-bold">450</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">أجار في أيام العطل:</span> <span class="text-black font-bold">650</span> <span class="text-black font-bold">دينار</span></p>
+          <p><span class="font-bold text-green-800">وقت الحجز:</span> <span class="text-black font-bold">من 10 صباحاً إلى 11 ليلا</span></p>
+          <p><span class="font-bold text-green-800">أجار حجز ليلة واحدة:</span> <span class="text-black font-bold">80</span> <span class="text-black font-bold">دينار</span></p>
+          <a href="farm-details.html?title=مزرعة جميلة في إربد&city=إربد&priceWeek=450&priceWeekend=650&priceNight=80&img=https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=crop&h=400&w=600&booking=من%2010%20صباحاً%20إلى%2011%20صباحاً" class="mt-4 block w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            عرض المزرعة
+          </a>
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- جافاسكربت لتصفية المزارع حسب المدينة -->
   <script>
     function filterFarms() {
       const selectedCity = document.getElementById("cityFilter").value;
