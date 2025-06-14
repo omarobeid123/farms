@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تفاصيل المزرعة</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white font-sans">
+
+  <!-- صورة المزرعة -->
+  <div id="farmImage" class="w-full h-64 bg-cover bg-center rounded-lg max-w-xl mx-auto mb-6"></div>
+
+  <!-- اسم المزرعة خارج المربع، بداية من اليمين، باللون الأسود مع مسافة صغيرة -->
+  <h1 id="farmTitle" class="text-3xl font-bold mb-4 text-black pr-4 text-right"></h1>
+
+  <!-- صندوق التفاصيل -->
+  <div class="p-6 bg-gray-50 rounded-lg max-w-xl mx-auto shadow-md">
+    <div class="space-y-4 text-xl text-gray-700">
+      <div>
+        <span class="font-bold text-green-800">المدينة:</span>
+        <span id="farmCity" class="text-black font-bold"></span>
+      </div>
+      <div>
+        <span class="font-bold text-green-800">أجار في أيام الأسبوع:</span>
+        <span id="priceWeek" class="text-black font-bold"></span>
+        <span class="text-black font-bold"> دينار</span>
+      </div>
+      <div>
+        <span class="font-bold text-green-800">أجار في أيام العطل:</span>
+        <span id="priceWeekend" class="text-black font-bold"></span>
+        <span class="text-black font-bold"> دينار</span>
+      </div>
+      <div>
+        <span class="font-bold text-green-800">أجار حجز ليلة واحدة:</span>
+        <span id="priceNight" class="text-black font-bold"></span>
+        <span class="text-black font-bold"> دينار</span>
+      </div>
+      <div>
+        <span class="font-bold text-green-800">وقت الحجز:</span>
+        <span id="bookingTime" class="text-black font-bold"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("farmTitle").textContent = params.get("title");
+    document.getElementById("farmCity").textContent = params.get("city");
+    document.getElementById("priceWeek").textContent = params.get("priceWeek");
+    document.getElementById("priceWeekend").textContent = params.get("priceWeekend");
+    document.getElementById("priceNight").textContent = params.get("priceNight") || "غير محدد";
+    document.getElementById("bookingTime").textContent = params.get("booking") || "غير محدد";
+    document.getElementById("farmImage").style.backgroundImage = `url('${params.get("img")}')`;
+  </script>
+
+</body>
+</html>
